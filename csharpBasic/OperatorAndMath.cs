@@ -1,5 +1,3 @@
-using System;
-
 public class OperatorAndMath
 {
     public static void Operators()

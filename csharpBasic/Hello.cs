@@ -1,5 +1,3 @@
-using System;
-
 namespace basicHello
 {
     class Hello
@@ -8,7 +6,7 @@ namespace basicHello
         {
             Console.WriteLine();
             Console.WriteLine("** File Hello **");
-            string greet= "Hello World! Hi world!";
+            string greet = "Hello World! Hi world!";
             Console.WriteLine(greet);
         }
     }

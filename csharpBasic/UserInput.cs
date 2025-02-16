@@ -1,5 +1,3 @@
-using System;
-
 public class UserInput
 {
     public static string UserInputMethodFname()

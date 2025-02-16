@@ -1,6 +1,3 @@
-
-using System;
-
 public class Arrays_
 {
     public static void MyArrMethod()
