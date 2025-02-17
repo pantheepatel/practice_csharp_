@@ -5,7 +5,7 @@ namespace csharpBasic
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! from basicHello".Pluralize());
+            Console.WriteLine("Hello World! from csharpBasic".Pluralize());
             // normal TimeSpan
             Console.WriteLine(TimeSpan.FromMilliseconds(15000));
             //Humanizer is a library that helps you humanize values like time, numbers, and quantities.
@@ -14,8 +14,8 @@ namespace csharpBasic
             Console.WriteLine(TimeSpan.FromMilliseconds(1508270).Humanize(3));
             // .WriteLine() is a method that writes a string followed by a line terminator to the console window.
             // .Write() is a method that writes a string to the console window.
-            basicHello.Hello.SayHello();
-            basicHello.VariablesDatatypePractice.variablesMethod();
+            csharpBasic.Hello.SayHello();
+            csharpBasic.VariablesDatatypePractice.variablesMethod();
 
 
             // topic: userInput 

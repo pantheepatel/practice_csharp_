@@ -1,4 +1,4 @@
-namespace basicHello
+namespace csharpBasic
 {
     class VariablesDatatypePractice
     {

@@ -16,7 +16,7 @@ namespace OOPs
         public ClassAndObj(string name, int myVar)
         {
             // this is referring to myVar of class you can change it with assigning param's myVar with this.myVar=myVar;
-            Console.WriteLine($"class and obj with params and usse of this {name},{myVar},{this.myVar}");
+            Console.WriteLine($"class and obj with params and use of this {name},{myVar},{this.myVar}");
         }
         public int myAge()
         {
@@ -33,6 +33,20 @@ namespace OOPs
         public void ClassAndObj()
         {
             Console.WriteLine("child of class and obj");
+        }
+    }
+
+    // below is the class to show the use of encapsulation, also how to get and set data for that
+    class Person
+    {
+        private string name;
+        public string Name
+        {
+            // 1st way
+            //get { return name; }
+            //set { name = value; }
+            // 2nd way - shorthand (automatic properties)
+            get; set;
         }
     }
 }
