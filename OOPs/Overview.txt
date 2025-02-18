@@ -1,0 +1,61 @@
+public private protected internal static abstract virtual override sealed; protected internal, protected private
+https://learn.microsoft.com/en-us/visualstudio/ide
+https://learn.microsoft.com/en-us/dotnet/navigate/tools-diagnostics/
+https://learn.microsoft.com/en-us/dotnet/csharp/
+https://www.geeksforgeeks.org/access-modifiers-in-c-sharp/
+https://www.geeksforgeeks.org/string-format-method-in-c-sharp-with-examples-set-1/
+https://devblogs.microsoft.com/visualstudio/
+
+Q. What is OOP?
+Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+
+Q. what is Class?
+A class is a user-defined data type. It consists of data members and member functions, which can be accessed and used by creating an instance of that class. It represents the set of properties or methods that are common to all objects of one type. A class is like a blueprint for an object.
+Constructors in Csharp are special methods that are executed when an object is created.
+
+Q. what is object?
+It is a basic unit of Object-Oriented Programming and represents the real-life entities.
+
+Q. pillars of oops
+	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
+		achieve: using 'abstract' keyword
+	2 Encapsulation: defined as the wrapping up of data under a single unit.
+	the data in a class is hidden from other classes, so it is also known as data-hiding.
+		achieve: using 'private' access modifier
+			you can use getter/setter to get/set value of this variable
+	3 Inheritance: capability of a class to derive properties and characteristics from another class is called Inheritance.
+		Use: allows the user to reuse the code whenever possible and reduce its redundancy.
+		achieve: using ':' in C#
+			types of inheritance(in-general): 1.Single 2.multiple 3.multi-level 4.hierarchical 5.hybrid
+			types of inheritance(in C#): 1.Single 2.multi-level 3.hierarchical (others can be achieved using Interfaces)
+	4 Polymorphism: polymorphism means having many forms.
+		achieve: methodOverloading and methodOverriding
+			1. methodOverloading - same class, same method name, compiletime polymorphism
+			2. methodOverriding - parent and child class, same method name, runtime polymorphism
+				use keywords, virtual(parent class method), override(child class method), most important when you make obj of child class and store it in type of parent class, so here if you haven't used these keywords then it will always call parent's method.
+
+	difference between
+	1. Abstraction is the process of hiding the working style of an object and showing the information about an object understandably.
+	2. Encapsulation is enclosing the related operations and data related to an object into that object.
+	3. Inheritance is a process of object reusability.
+	4. Polymorphism is One function behaves in different forms.
+	--> Abstraction solves the problem at the design level. whereas, Encapsulation solves the problem at the implementation level.
+
+Q. Advantages of Using OOP
+	Code reusability, Modularity, Scalability, Abstraction, Data hiding, Flexibility, Ease of Maintenance
+
+Q. what are interfaces in C#?
+An interface in C# defines the contract to which a class must adhere. All methods in an interface are abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
+	It describes methods and attributes but not their implementations.
+
+Q. Access modifiers - control the visibility of classes and their members.
+	Public: from anyplace.
+	Private: only within the class.
+	Protected: within the class and its descendant classes.
+	Internal: within the same assembly. Internal members are accessible only within files in the same assembly (.dll/.exe).
+	protected internal: Only code in the same assembly or in a derived class in another assembly can access this type or member.
+	private protected: Only code in the same assembly and in the same class or a derived class can access the type or member.
+
+Q. Instance vs Static Members (by default all members in class are instance members)
+Instance Members: These members belong to a specific instance of the class and may only be accessed by constructing a class object.
+Static Members: Belong to the class itself and can be accessed without generating a new instance of the class.

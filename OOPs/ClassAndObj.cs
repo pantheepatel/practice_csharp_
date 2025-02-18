@@ -22,6 +22,11 @@ namespace OOPs
         {
             return this.myVar;
         }
+
+        virtual public void voice()
+        {
+            Console.WriteLine("voice from parent");
+        }
     }
 
     internal class ChildClassAndObj : ClassAndObj
@@ -33,6 +38,10 @@ namespace OOPs
         public void ClassAndObj()
         {
             Console.WriteLine("child of class and obj");
+        }
+        override public void voice()
+        {
+            Console.WriteLine("voice from child");
         }
     }
 
@@ -47,6 +56,40 @@ namespace OOPs
             //set { name = value; }
             // 2nd way - shorthand (automatic properties)
             get; set;
+        }
+    }
+
+    abstract class Animal
+    {
+        // Abstract method (does not have a body)
+        public abstract void animalSound();
+        // Regular method
+        public void sleep()
+        {
+            Console.WriteLine("Zzz");
+        }
+    }
+
+    // Derived class (inherit from Animal)
+    class Pig : Animal
+    {
+        public override void animalSound()
+        {
+            // The body of animalSound() is provided here
+            Console.WriteLine("The pig says: wee wee");
+        }
+    }
+
+    //class deriveFromUserInput: UserInput { }
+    // checking for access modifiers
+
+    class modifiersCSharp
+    {
+        public void testAccess()
+        {
+            // Member value is Accessible
+            checkClasses obj1 = new checkClasses();
+            //obj1.value5 = 12; //change variable from value1 to value5
         }
     }
 }
