@@ -1,0 +1,26 @@
+﻿document for Visual Studio, C# compilation, .NET
+https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names
+
+Q. What is Visual Studio?
+It is a powerful developer tool that you can use to complete the entire development cycle in one place. It's a comprehensive integrated development environment (IDE) that you can use to write, edit, debug, and build code. Then deploy your app. 
+
+Q. Why to use VS over others?
+Visual Studio includes compilers, code completion tools, source control, extensions, and many other features to enhance every stage of the software development process.
+	--> Workload-based installer - install only what you need
+	Powerful coding tools and features - everything you need to build your apps in one place
+	Multiple language support - code in C++, C#, JavaScript, TypeScript, Python, and more
+	Cross-platform development - build apps for any platform
+	Version control integration - collaborate on code with team mates
+	AI-assisted development - write code more efficiently with AI assistance
+
+Q. Hot Reload
+	Use it to fix issues or make changes to the code on the fly and see the results without restarting the app.
+
+Q. Coding Standards in C#
+	1. Use language keywords for datatypes instead of the runtime types. For example, use string instead of System.String
+	2. 'var' keyword is used to declare implicit type variables in C#, which means it tells the compiler to figure out the variable type at compilation time. A var variable must be initialized at the time of declaration. ​​var can contain any type of data.
+	-- Interface names start with a capital I.
+	-- Use "PascalCasing" when naming a class, interface, struct, or delegate type, constant names, both fields and local constants
+	-- Use camelCase for method parameters and local variables.
+	-- Private instance fields start with an underscore (_) and the remaining text is camelCased.
+	-- Static fields start with s_
