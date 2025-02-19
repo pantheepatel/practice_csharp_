@@ -1,4 +1,5 @@
 public private protected internal static abstract virtual override sealed; protected internal, protected private
+non static member of class can not be accessed via static block of class
 https://learn.microsoft.com/en-us/visualstudio/ide
 https://learn.microsoft.com/en-us/dotnet/navigate/tools-diagnostics/
 https://learn.microsoft.com/en-us/dotnet/csharp/
@@ -9,18 +10,49 @@ https://devblogs.microsoft.com/visualstudio/
 Q. What is OOP?
 Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
 
-Q. what is Class?
+Q. Class:
 A class is a user-defined data type. It consists of data members and member functions, which can be accessed and used by creating an instance of that class. It represents the set of properties or methods that are common to all objects of one type. A class is like a blueprint for an object.
 Constructors in Csharp are special methods that are executed when an object is created.
 
-Q. what is object?
+Q. Variables: (non-static/instance, static, constant, readOnly)
+	1. static - using 'static' keyword or inside any 'static block'
+		-- initialized once execution of class starts
+		::IMPORTANT:: 
+		-- in the life cycle of class; static var is initialized only once.
+	2. non static/instance - which are not static, need to make instance of class to initialize them
+		-- they are given memory allocation when you initialize them
+	3. constant - can't modified after declaration, so it's must to initialize while declaring. keyword "const"
+		::IMPORTANT:: 
+		-- in the life cycle of class; constant var is initialized only once.
+		-- static var can be modified/override but constant can not
+		-- both are assigned memory only once, not related to instance of class
+	4. read only - can't modified after initialization. keyword "readonly"
+		-- similar to nonStatic; ie, initialized only after creating instance of class and once for each instance of class.
+		-- constant is fixed for whole class but readonly is fixed for instance of class
+
+Q. Instance vs Static vs Reference Members in Class (by default all members in class are instance members)
+Instance Members: These members belong to a specific instance of the class and may only be accessed by constructing a class object.
+Static Members: Belong to the class itself and can be accessed without generating a new instance of the class.
+
+Q. Varible vs Instance vs Reference of a class
+variable: copy of class which is not initialized
+instance: copy of class which is initialized(using new keyword) which has own memory(not shared)
+reference: copy of class which is initialized(using existing instance/obj) which won't have own memory(shared)
+	reference of class can be called as pointer to the instance
+
+Q. object:
 It is a basic unit of Object-Oriented Programming and represents the real-life entities.
 
 Q. constructor:
 it is special method of class used to initialize variable of class.
 	does not have return type/value
 	implicit(default-bcz no args)-public, explicit(default, parameterized, copy, static) add modifiers
-	copy cons-want to use same value multiple time
+		copy cons-want to use same value multiple time
+		
+Q. static constructor 
+defined explicitly if no static member in non-static class. to define static members, they are never explicitly called always implicit calling. so they have only 'private' access modifier.
+	they are not parameterized, no overloading, 1st to execute when class is first used(even before main method if in class)
+subQ. non-static/instance of constructor are implicit in every class(except static class), 'public' access modifier
 
 Q. pillars of oops
 	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
@@ -50,10 +82,6 @@ Q. pillars of oops
 Q. Advantages of Using OOP
 	Code reusability, Modularity, Scalability, Abstraction, Data hiding, Flexibility, Ease of Maintenance
 
-Q. what are interfaces in C#?
-An interface in C# defines the contract to which a class must adhere. All methods in an interface are abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
-	It describes methods and attributes but not their implementations.
-
 Q. Access modifiers/specifiers - control the visibility of classes and their members.
 	Public: from anyplace.
 	Private: only within the class.
@@ -65,10 +93,6 @@ Q. Access modifiers/specifiers - control the visibility of classes and their mem
 		can use member of other class when this class is derived from parent
 	private protected: Only code in the same assembly and in the same class or a derived class can access the type or member.
 
-Q. Instance vs Static Members (by default all members in class are instance members)
-Instance Members: These members belong to a specific instance of the class and may only be accessed by constructing a class object.
-Static Members: Belong to the class itself and can be accessed without generating a new instance of the class.
-
 Q. static-early-compileTime binding
 	reference type(parent) of variable determines which method is going to be called even though it is the instance of derived class(child class)
 	ParentClass obj=new ChildClass();
@@ -79,6 +103,18 @@ Q. dynamic-runTime binding
 
 Q. Anonymous types provide a convenient way to encapsulate a set of read-only properties into a single object without having to explicitly define a type first.The type name is generated by the compiler and is not available at the source code level. The type of each property is inferred by the compiler.
 
-Q. Interface
-	the default scope members of an interface is public but for class they are private.
-	we can't declare any variables in this, only methods
+Q. what are interfaces in C#?
+An interface in C# defines the contract to which a class must adhere. All methods in an interface are abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
+	It describes methods and attributes but not their implementations.
+	-- the default scope members of an interface is public but for class they are private.
+	-- we can't declare any variables in interface, only methods
+
+
+
+
+
+
+Questions
+	use of nullable types
+	assemblies
+	string and array

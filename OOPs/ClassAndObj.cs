@@ -9,6 +9,10 @@ namespace OOPs
         {
             Console.WriteLine($"class and obj without params");
         }
+        static ClassAndObj()
+        {
+            Console.WriteLine("static con");
+        }
         public ClassAndObj(int var1)
         {
             this.myVar = var1;
