@@ -31,3 +31,23 @@ Q. Coding Standards in C#
 	-- Use camelCase for method parameters and local variables.
 	-- Private instance fields start with an underscore (_) and the remaining text is camelCased.
 	-- Static fields start with s_
+
+Q. Main method in C#
+	first method that is invoked. entry point of program execution, if more than one main method then set startup project.
+
+Q. top level statements
+	-- are implicitly in the global namespace.
+
+** You use the struct, class, interface, enum, and record constructs to create your own custom types. **
+
+Q. Value type and reference type
+	Types can derive from other types, called base types.
+	Types that you define by using the struct keyword are value types; all the built-in numeric types are structs. Types that you define by using the class or record keyword are reference types. Reference types and value types have different compile-time rules, and different run-time behavior.
+	A class is a reference type. When an object of the type is created, the variable to which the object is assigned holds only a reference to that memory. When the object reference is assigned to a new variable, the new variable refers to the original object. Changes made through one variable are reflected in the other variable because they both refer to the same data.
+	A struct is a value type. When a struct is created, the variable to which the struct is assigned holds the struct's actual data. When the struct is assigned to a new variable, it's copied. The new variable and the original variable therefore contain two separate copies of the same data. Changes made to one copy don't affect the other copy.
+
+Q. compile time and runtime types
+
+Q.
+The using keyword can be used so that the complete name isn't required. like using System; so you can write Console.Write(); instead of System.Console.Write()
+	The using directive obviates the requirement to specify the name of the namespace for every class. like namespace.class

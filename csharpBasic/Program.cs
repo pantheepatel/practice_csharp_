@@ -1,9 +1,16 @@
 using Humanizer;
+//public class MyClass
+//{
+//    public static void Main()
+//    {
+//        Console.WriteLine("Hello World!");
+//    }
+//}
 namespace csharpBasic
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("Hello World! from csharpBasic".Pluralize());
             // normal TimeSpan
@@ -16,7 +23,8 @@ namespace csharpBasic
             // .Write() is a method that writes a string to the console window.
             csharpBasic.Hello.SayHello();
             csharpBasic.VariablesDatatypePractice.variablesMethod();
-
+            // int a = null; // by default it can't accept null values so use ?
+            int? a = null;
 
             // topic: userInput 
             // when you are dealing with userinput you should use type conversion methods, so it will give only exception.

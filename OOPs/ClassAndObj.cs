@@ -52,6 +52,9 @@ namespace OOPs
         {
             Console.WriteLine("voice from child");
         }
+        public void voice2() {
+            Console.WriteLine("this is voice 2");
+        }
     }
 
     // below is the class to show the use of encapsulation, also how to get and set data for that
