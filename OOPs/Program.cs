@@ -6,12 +6,12 @@
 
 
 // questions
-// internal access modifier
-// static keyword
-// dynamic binding
-// pass by value and reference
+// Interfaces
+// Structs and Enums
+// Immutability
+// Arrays, string
 // what is the significance of using private constructor
-// what is protected internal and private protected
+// default, Parameterized, copy, static, private, public, protected, internal constructors. Chained Constructor (Constructor Overloading)
 // scenario based questions
 
 namespace OOPs
@@ -45,6 +45,7 @@ namespace OOPs
             // dynamic binding
             ClassAndObj objChildParent = new ChildClassAndObj();
             objChildParent.voice();
+            //objChildParent.voice2(); // can't use voice2() bcz there is no declaration of method in ClassAndObj(parent) reference type
 
             // topic - class and objects
             ClassAndObj obj1 = new ClassAndObj();
