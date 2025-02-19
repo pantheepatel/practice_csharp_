@@ -9,6 +9,15 @@ namespace OOPs
         {
             Console.WriteLine($"class and obj without params");
         }
+        public ClassAndObj(int var1)
+        {
+            this.myVar = var1;
+        }
+        public ClassAndObj(ClassAndObj copyConObj)
+        {
+            myVar = copyConObj.myVar;
+            Console.WriteLine("my var in copy con is: " + myVar);
+        }
         public ClassAndObj(string name)
         {
             Console.WriteLine($"class and obj with params {name}");

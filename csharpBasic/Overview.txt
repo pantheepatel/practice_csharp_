@@ -1,5 +1,12 @@
 ﻿document for Visual Studio, C# compilation, .NET
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names
+Q. what is .NET?
+.NET is a free, cross-platform, open-source developer platform for building a broad range of applications, including desktop, web, and mobile. It supports multiple programming languages.
+	-- disadvantages: memory-leak, license cost of VS, require RunTime Environment
+	-- alternative: 
+	1.react/angular + node.js 
+	2.Mono(open source implementation of Microsoft’s .NET Framework)
+	3.java(with other frameworks like spring)
 
 Q. What is Visual Studio?
 It is a powerful developer tool that you can use to complete the entire development cycle in one place. It's a comprehensive integrated development environment (IDE) that you can use to write, edit, debug, and build code. Then deploy your app. 

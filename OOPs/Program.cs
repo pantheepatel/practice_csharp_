@@ -22,6 +22,11 @@ namespace OOPs
         {
             Console.WriteLine("Into new Project: OOPs");
 
+            ClassAndObj copyConObj1 = new ClassAndObj(10);
+            ClassAndObj copyConObj2 = new ClassAndObj(20);
+            ClassAndObj copyConObj3 = new ClassAndObj(copyConObj2);
+
+
             // topic - methods
             //public static void Main()
             //static means that the method belongs to the Program class and not an object of the Program class.

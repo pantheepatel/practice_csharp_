@@ -16,6 +16,12 @@ Constructors in Csharp are special methods that are executed when an object is c
 Q. what is object?
 It is a basic unit of Object-Oriented Programming and represents the real-life entities.
 
+Q. constructor:
+it is special method of class used to initialize variable of class.
+	does not have return type/value
+	implicit(default-bcz no args)-public, explicit(default, parameterized, copy, static) add modifiers
+	copy cons-want to use same value multiple time
+
 Q. pillars of oops
 	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
 		achieve: using 'abstract' keyword
