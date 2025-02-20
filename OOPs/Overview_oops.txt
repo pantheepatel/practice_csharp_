@@ -128,17 +128,27 @@ An interface in C# defines the contract to which a class must adhere. All method
 	-- we can't declare any variables in interface, only methods
 
 Q. Method Parameters:
-Named Parameters
-Ref Parameters
-Out Parameters
-Default or Optional Parameters
-Dynamic Parameters
-Value Parameters
-Params
+	Named Parameters - connect according to name passed
+	Ref Parameters - require initialization before passing
+	Out Parameters - requires the method to assign a value to the parameter before it returns
+	Default or Optional Parameters - given by default
+	Dynamic Parameters - don't know the type of argument
+	Value Parameters - normal way of passing value(copy of value is passed)
+	Params - variable no of args(like ...args in js)
 
 Q. enum/enumeration: user-defined type
 set of named constant values.
 directl under namespace, class, structure
+
+Q. struct/structures: user-defined type
+used in procedure lan like C, which are replaced by class in OOP lan.
+struct can contain all things that class can contain(IN C# not other lan)
+	(can contain - field, method, constructor, property, indexers, operator method,... )
+
+Q. diff between class and struct
+class - ref type, stored in heap, larger volume of data, predefined types(string, object,...), new is mandatory for creating instance, fields can be initialized at time of declaration
+struct - value type, stored in stack, smaller volume of data, predefined types(Int32, float, boolean), can directly create instance, fields cannot be initialized at time of declaration, have to initialize fields of struct by calling constructor with 'new' keyword or explicitly setting them, can only have parameterized con(no default- they are always implicit)
+
 
 Q. Partial
 used - Classes, Structs, Interfaces, Methods
@@ -163,10 +173,19 @@ method with new keyword will behave same as when we don't use virtual and overri
 	use- When you don't want polymorphism but need a method with the same name in the derived class.
 		When you want to provide a new implementation that does not replace the base class behavior.
 
+Q. destructor and deconstructor
+	1. destructor - ~ClassName(), runs when the garbage collector (GC) destroys an object.
+		use - cleaning up unmanaged resources. only for class(only 1 destructor) NOT struct
+	2. deconstructor - special method used for deconstructing an object into its individual properties.
+		use - with tuples. Can have parameters. can be used in class and struct both.
+
+
+
 
 Questions
-	string and array -- baki
 	struct
+	indexer
+	operator method
 
 	
 demo and definition why using different types with access modifier other names difference, why that name only,

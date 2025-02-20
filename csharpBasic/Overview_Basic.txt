@@ -1,5 +1,10 @@
 ﻿document for Visual Studio, C# compilation, .NET
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names
+
+.NET 7+ <- C#11
+.NET 8+ <- C#12 -- stable and currently using it
+.NET 9+ <- C#13
+
 Q. what is .NET?
 .NET is a free, cross-platform, open-source developer platform for building a broad range of applications, including desktop, web, and mobile. It supports multiple programming languages.
 	-- disadvantages: memory-leak, license cost of VS, require RunTime Environment

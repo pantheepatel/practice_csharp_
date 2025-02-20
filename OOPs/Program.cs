@@ -30,6 +30,11 @@ namespace OOPs
 
             Console.WriteLine("Into new Project: OOPs");
 
+            ClassAndObj copy1ForGC = new ClassAndObj();
+            copy1ForGC = null; // eligible for GC
+            GC.Collect(); // forcefully making call to garbage collector bcz sometime destructor might not run
+
+
             ClassAndObj copyConObj1 = new ClassAndObj(10);
             ClassAndObj copyConObj2 = new ClassAndObj(20);
             ClassAndObj copyConObj3 = new ClassAndObj(copyConObj2);

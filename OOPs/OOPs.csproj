@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Overview.txt" />
+    <Content Include="Overview_oops.txt" />
   </ItemGroup>
 
 </Project>
