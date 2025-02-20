@@ -1,11 +1,14 @@
 namespace OOPs
 {
-    internal class ClassAndObj
+    public class ClassAndObj
     {
         public int myVar = 20;
-
+        ~ClassAndObj()
+        {
+            Console.WriteLine("destructor is called and freeing up memory,...");
+        }
         // when constructor is private, you can not make obj and can not inherit that class
-        public ClassAndObj()
+        internal ClassAndObj()
         {
             Console.WriteLine($"class and obj without params");
         }
@@ -56,7 +59,8 @@ namespace OOPs
         {
             Console.WriteLine("voice from child");
         }
-        public void voice2() {
+        public void voice2()
+        {
             Console.WriteLine("this is voice 2");
         }
     }
@@ -106,6 +110,25 @@ namespace OOPs
             // Member value is Accessible
             checkClasses obj1 = new checkClasses();
             //obj1.value5 = 12; //change variable from value1 to value5
+        }
+    }
+
+    abstract class abClass
+    {
+        int x = 0;
+        //abstract pVar;
+        public abstract void abMethod();
+    }
+
+    class abClassImplement : abClass
+    {
+        override public void abMethod()
+        {
+            Console.WriteLine("into implementation of abclass abstract method");
+        }
+        public void otherMethod()
+        {
+            Console.WriteLine("other method of abClassImplement");
         }
     }
 }

@@ -13,9 +13,17 @@ namespace OOPs
         private int value3;
         protected internal int value4;
         protected private int value5;
+        public checkClasses()
+        {
+            Console.WriteLine("checkClasses here in parent***");
+        }
     }
     class checkClassChild : checkClasses
     {
+        public checkClassChild():base()
+        {
+            Console.WriteLine("checkClasses here in child***");
+        }
         public void show1()
         {
             value1 = 1;

@@ -1,11 +1,14 @@
 public private protected internal static abstract virtual override sealed; protected internal, protected private
 non static member of class can not be accessed via static block of class
+'virtual' or 'absract' members can not be 'private'
+can not create instance of 'abstract class' or 'interface'
 https://learn.microsoft.com/en-us/visualstudio/ide
 https://learn.microsoft.com/en-us/dotnet/navigate/tools-diagnostics/
 https://learn.microsoft.com/en-us/dotnet/csharp/
 https://www.geeksforgeeks.org/access-modifiers-in-c-sharp/
 https://www.geeksforgeeks.org/string-format-method-in-c-sharp-with-examples-set-1/
 https://devblogs.microsoft.com/visualstudio/
+https://www.geeksforgeeks.org/c-sharp-method-parameters/
 
 Q. What is OOP?
 Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
@@ -56,6 +59,13 @@ defined explicitly if no static member in non-static class. to define static mem
 	they are not parameterized, no overloading, 1st to execute when class is first used(even before main method if in class)
 subQ. non-static/instance of constructor are implicit in every class(except static class), 'public' access modifier
 
+Q. sealed class - no inheritance but can create instance
+   private constructor - no inheritance and no instance creation(outside class)
+   protected constructor - inheritance but no instance creation
+   internal constructor - Only accessible within the same assembly, Prevents object creation from external assemblies.
+   static constuctor - Runs only once when the class is first loaded into memory. Does not take parameters.
+
+
 Q. pillars of oops
 	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
 		achieve: using 'abstract' keyword
@@ -67,7 +77,11 @@ Q. pillars of oops
 		Use: allows the user to reuse the code whenever possible and reduce its redundancy.
 		achieve: using ':' in C#
 			types of inheritance(in-general): 1.Single 2.multiple 3.multi-level 4.hierarchical 5.hybrid
-			types of inheritance(in C#): 1.Single 2.multi-level 3.hierarchical (others can be achieved using Interfaces)
+			types of inheritance(in C# for class): 1.Single 2.multi-level 3.hierarchical (others can be achieved using Interfaces)
+				because of ambiguity problem
+			**	when class is being inherit it is to consume method whereas when interface is being implemented it is to being implement method/member
+			types of inheritance(in C# for interface): 4.multiple 5.hybrid
+		just like super() in java in C# we use base()
 	4 Polymorphism: polymorphism means having many forms.
 		achieve: methodOverloading and methodOverriding
 			1. methodOverloading - same class, same method name, compiletime polymorphism
@@ -80,6 +94,10 @@ Q. pillars of oops
 	3. Inheritance is a process of object reusability.
 	4. Polymorphism is One function behaves in different forms.
 	--> Abstraction solves the problem at the design level. whereas, Encapsulation solves the problem at the implementation level.
+
+Q. abstraction:
+	abstract method: method which does not contain body, only declaration
+	abstract class: class which contains abstract method(also non-abstract members)
 
 Q. Advantages of Using OOP
 	Code reusability, Modularity, Scalability, Abstraction, Data hiding, Flexibility, Ease of Maintenance
@@ -95,26 +113,62 @@ Q. Access modifiers/specifiers - control the visibility of classes and their mem
 		can use member of other class when this class is derived from parent
 	private protected: Only code in the same assembly and in the same class or a derived class can access the type or member.
 
-Q. static-early-compileTime binding
+Q. static-early-compileTime binding-method overloading
 	reference type(parent) of variable determines which method is going to be called even though it is the instance of derived class(child class)
 	ParentClass obj=new ChildClass();
 	obj.method() --> will call the method of Parent only, also in here you can not use the methods of child class, it is like creating instance of parent class only
 
-Q. dynamic-runTime binding
+Q. dynamic-runTime binding-method overriding
 	to make runtime binding we use virtual and override keyword to specify which method is overridden and which to use.
 
-Q. what are interfaces in C#?
-An interface in C# defines the contract to which a class must adhere. All methods in an interface are abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
+Q. what are interfaces in C#? user defined type which contains only abstract method in body
+An interface in C# defines the contract to which a class must adhere. All methods in an interface are public abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
 	It describes methods and attributes but not their implementations.
 	-- the default scope members of an interface is public but for class they are private.
 	-- we can't declare any variables in interface, only methods
 
+Q. Method Parameters:
+Named Parameters
+Ref Parameters
+Out Parameters
+Default or Optional Parameters
+Dynamic Parameters
+Value Parameters
+Params
 
+Q. enum/enumeration: user-defined type
+set of named constant values.
+directl under namespace, class, structure
 
+Q. Partial
+used - Classes, Structs, Interfaces, Methods
+partial class(internal): is used to split the definition of a class, struct, interface, or method across multiple files. This allows developers to work on different parts of the same class in separate files without conflict.
+	All partial class files must have the same namespace and class name.
+		for destructuring, code generation, team collaboration
+partial method(private): is declared in one part of a partial class and optionally implemented in another. If not implemented, it is removed at compile-time.
 
+Q. Extern
+The extern keyword is used to declare a method that is implemented outside the C# code (e.g., in an unmanaged DLL or assembly).
+Declares a method implemented in an external DLL
+used - Methods (with DllImport), Assembly Aliases, Warnings
+
+Q. Immutability
+Objects: are objects which once loaded cannot be changed/modified by anyway external/internal(no body can change data)
+	used- master data, configuration data, singleton objects
+	keyword- readonly
+
+Q. new keyword
+method with new keyword will behave same as when we don't use virtual and override(ie. will run the method whose reference is given)
+	method with new keyword is called 'method hiding'
+	use- When you don't want polymorphism but need a method with the same name in the derived class.
+		When you want to provide a new implementation that does not replace the base class behavior.
 
 
 Questions
-	use of nullable types
-	assemblies
-	string and array
+	string and array -- baki
+	struct
+
+	
+demo and definition why using different types with access modifier other names difference, why that name only,
+static keyword, class , member, constructor, what change, destructor? , why name of constructor same class, deep copy and shallow copy
+symbol that its showing pass by reference
