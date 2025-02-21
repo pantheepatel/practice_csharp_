@@ -1,0 +1,39 @@
+clearing memory for unmanaged resources:
+1. GC: you have to explicitly call GC. using System.GC.Collect();
+2. IDisposable: manually disposing object. first check if resourse is not null then objName.close(); objName.Dispose(); 
+	in here your class should extend IDisposable class and then override method Dispose()
+3. 'using' keyword(best and prefered): best bcz it will remove from memory after completion of its task
+	eg., using (FileStream fs = new FileStream("TextFile1.txt", FileMode.OpenOrCreate)){ WRITE LOGIC HERE }
+
+try, catch, finally:
+try: Write the code that may cause an exception inside the try block.
+catch: Handles exceptions if they occur inside the try block.
+finally: Always executes (whether an exception occurs or not), used to clean up resources.
+
+Exception: An exception is an error that occurs during program execution, disrupting the normal flow. 
+	C# provides built-in mechanisms to handle exceptions using try-catch blocks.
+	Custom Exception: eg., NullReferenceException, IndexOutOfRangeException, DivideByZeroException
+	Default Exception: Extend Exception class and override the constructor.
+
+
+
+
+Today's Plan:
+	Fields and Properties
+	pointer types
+	different types of Methods
+	Common Exceptions
+	Common Interface
+
+
+Array
+List
+Hashtable
+Dictionaries
+Generics in c#
+SOLID Principles
+
+An Overview of Events
+Delegates
+Events Redux
+Extension Methods

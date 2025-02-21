@@ -10,6 +10,8 @@ https://www.geeksforgeeks.org/string-format-method-in-c-sharp-with-examples-set-
 https://devblogs.microsoft.com/visualstudio/
 https://www.geeksforgeeks.org/c-sharp-method-parameters/
 
+method types: https://www.csharp.com/article/type-of-methods-in-c-sharp/
+
 Q. What is OOP?
 Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
 
@@ -46,13 +48,19 @@ reference: copy of class which is initialized(using existing instance/obj) which
 	reference of class can be called as pointer to the instance
 
 Q. object:
-It is a basic unit of Object-Oriented Programming and represents the real-life entities.
+It is a basic unit of Object-Oriented Programming and represents the real-life entities. used to access/use fields/methods of class.
+
+Q. method:
+A method is a block of code that performs a specific task. It can be executed when called, and it may take inputs, process them, and return a result. Methods can be defined within classes and are used to break down complex programs into simpler, modular pieces.
+use - improve code organization, readability, and maintainability by promoting code reuse.
+* sealed method: method that cannot be overridden by derived classes. It is used to prevent further modification of a method while still allowing inheritance.
+	Cannot apply sealed on a non-overridden method.
 
 Q. constructor:
 it is special method of class used to initialize variable of class.
 	does not have return type/value
 	implicit(default-bcz no args)-public, explicit(default, parameterized, copy, static) add modifiers
-		copy cons-want to use same value multiple time
+		copy cons-want to use same value multiple time, creates new obj by coping the values of an existing obj.
 		
 Q. static constructor 
 defined explicitly if no static member in non-static class. to define static members, they are never explicitly called always implicit calling. so they have only 'private' access modifier.
@@ -64,7 +72,6 @@ Q. sealed class - no inheritance but can create instance
    protected constructor - inheritance but no instance creation
    internal constructor - Only accessible within the same assembly, Prevents object creation from external assemblies.
    static constuctor - Runs only once when the class is first loaded into memory. Does not take parameters.
-
 
 Q. pillars of oops
 	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
@@ -149,7 +156,6 @@ Q. diff between class and struct
 class - ref type, stored in heap, larger volume of data, predefined types(string, object,...), new is mandatory for creating instance, fields can be initialized at time of declaration
 struct - value type, stored in stack, smaller volume of data, predefined types(Int32, float, boolean), can directly create instance, fields cannot be initialized at time of declaration, have to initialize fields of struct by calling constructor with 'new' keyword or explicitly setting them, can only have parameterized con(no default- they are always implicit)
 
-
 Q. Partial
 used - Classes, Structs, Interfaces, Methods
 partial class(internal): is used to split the definition of a class, struct, interface, or method across multiple files. This allows developers to work on different parts of the same class in separate files without conflict.
@@ -179,6 +185,7 @@ Q. destructor and deconstructor
 	2. deconstructor - special method used for deconstructing an object into its individual properties.
 		use - with tuples. Can have parameters. can be used in class and struct both.
 
+Q. be default return statement is value type but you can have "ref return" statements "return ref numbers[i];"
 
 
 

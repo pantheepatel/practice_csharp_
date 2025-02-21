@@ -32,7 +32,7 @@ namespace OOPs
 
             ClassAndObj copy1ForGC = new ClassAndObj();
             copy1ForGC = null; // eligible for GC
-            GC.Collect(); // forcefully making call to garbage collector bcz sometime destructor might not run
+            System.GC.Collect(); // forcefully making call to garbage collector bcz sometime destructor might not run
 
 
             ClassAndObj copyConObj1 = new ClassAndObj(10);
@@ -121,7 +121,7 @@ namespace OOPs
             IInterfaceClass1 iclassInterface1 = new InterfaceClass();
             IInterfaceClass2 iclassInterface2 = new InterfaceClass();
             iclassInterface1.other();
-            iclassInterface2.other();
+            //iclassInterface2.other();
 
             // enum
             EnumClass enumClassVar = new EnumClass();

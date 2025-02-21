@@ -29,7 +29,27 @@ namespace moderateCSharp
 
 
             // 21-02
-            
+            // looping, branching, jumping(goto), switching
+
+            //// exceptions
+            //ExceptionClass exceptionObj1 = new();
+            //exceptionObj1.ExceptionClassMethod();
+            //exceptionObj1.ExceptionCustomMethod();
+
+
+            //// clearing memory for unmanaged resources
+            //// 1st way to dispose using garbage collector
+            //// 2nd way of clearing open resource - manually disposing object
+            //FileHandler handler = new FileHandler("TextFile1.txt");
+            //handler.Dispose();  // Explicitly releasing resources
+
+            //// 3rd way of clearing open resource - using keyword
+            //using (FileStream fs = new FileStream("TextFile1.txt", FileMode.OpenOrCreate))
+            //{
+            //    Console.WriteLine("File opened.");
+            //}  // fs.Dispose() is called automatically here
+            //Console.WriteLine("File closed.");
+
         }
     }
 }

@@ -38,7 +38,6 @@ namespace OOPs
         {
             return this.myVar;
         }
-
         virtual public void voice()
         {
             Console.WriteLine("voice from parent");

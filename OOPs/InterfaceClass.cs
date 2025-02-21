@@ -10,13 +10,15 @@ namespace OOPs
     {
         //int show();
         void hide();
-        void other();
+        void other() {
+            Console.WriteLine("hello");
+        }
     }
     interface IInterfaceClass2
     {
         void show();
         void hide();
-        void other();
+        //void other();
     }
     class InterfaceClass: IInterfaceClass1,IInterfaceClass2
     {
@@ -33,14 +35,14 @@ namespace OOPs
         {
             Console.WriteLine("void hide");
         }
-        void IInterfaceClass1.other()
-        {
-            Console.WriteLine("void other for interface1");
-        }
-        void IInterfaceClass2.other()
-        {
-            Console.WriteLine("void other for interface2");
-        }
+        //public void other()
+        //{
+        //    Console.WriteLine("void other for interface1");
+        //}
+        //void IInterfaceClass2.other()
+        //{
+        //    Console.WriteLine("void other for interface2");
+        //}
 
     }
 }

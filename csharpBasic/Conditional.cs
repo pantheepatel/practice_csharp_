@@ -1,3 +1,4 @@
+// branching - if, else if, else
 public class Conditional
 {
     public static void ConditionalMethod()
@@ -22,6 +23,13 @@ public class Conditional
         else
         {
             Console.WriteLine("Good evening.");
+            Console.WriteLine("going to Focus go to statement!!!");
+            goto focus;
+        }
+    focus:
+        {
+            Console.WriteLine("in focus..........");
+            Console.WriteLine("out from focussss!!!???");
         }
 
         Console.WriteLine("switch statement with break;");
@@ -49,6 +57,7 @@ public class Conditional
             case 7:
                 Console.WriteLine("Sunday");
                 break;
+            //goto case 6;
             default:
                 Console.WriteLine("Looking forward to the Weekend.");
                 break;
