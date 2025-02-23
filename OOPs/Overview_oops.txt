@@ -187,14 +187,28 @@ Q. destructor and deconstructor
 
 Q. be default return statement is value type but you can have "ref return" statements "return ref numbers[i];"
 
+Q. Object cloning: refers to creating an exact copy of an object in memory.
+	1. shallow copy - MemberwiseClone()
+		copies members of ref type members(does not create new objects for them).
+			changes to ref also reflect to parent
+	2. deep copy - manual cloning, serialization, or ICloneable(interface)
+		Copies the entire object along with referenced objects (creates new instances).
+		
+		
+
+
+Q. Operator method: in C# allow overloading operators to define custom behaviors for user-defined types classes & structs.
+	public static returnType operator operatorSymbol(parameters){ // Define operation logic }
+
+Q. Extra:
+	1. Parallel computing allows multiple calculations to run concurrently.
+
 
 
 Questions
-	struct
 	indexer
-	operator method
 
-	
+
 demo and definition why using different types with access modifier other names difference, why that name only,
 static keyword, class , member, constructor, what change, destructor? , why name of constructor same class, deep copy and shallow copy
 symbol that its showing pass by reference

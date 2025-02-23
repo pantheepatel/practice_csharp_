@@ -1,4 +1,5 @@
 using ModerateCSharp;
+using System.Threading.Tasks;
 
 namespace moderateCSharp
 {
@@ -49,6 +50,14 @@ namespace moderateCSharp
             //    Console.WriteLine("File opened.");
             //}  // fs.Dispose() is called automatically here
             //Console.WriteLine("File closed.");
+
+
+            //// extras
+            //// 1. parallel
+            //Parallel.For(0, 10, i =>
+            //{
+            //    Console.WriteLine($"Task {i} running on thread {Task.CurrentId}");
+            //});
 
         }
     }

@@ -15,15 +15,18 @@ Exception: An exception is an error that occurs during program execution, disrup
 	Custom Exception: eg., NullReferenceException, IndexOutOfRangeException, DivideByZeroException
 	Default Exception: Extend Exception class and override the constructor.
 
-
+Properties and Fields: 
+	Properties expose fields. 
+	Fields should (almost always) be kept private to a class and accessed via get and set properties.
+	Auto-implemented properties: simplify property declarations without needing a separate field.
 
 
 Today's Plan:
-	Fields and Properties
+	Common Interface - left bcz all in list are linked to topics like LINQ and List
+		IDisposable Supports manual resource cleanup using Dispose() but now using 'using' kwyword
+
 	pointer types
-	different types of Methods
 	Common Exceptions
-	Common Interface
 
 
 Array
