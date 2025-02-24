@@ -24,19 +24,6 @@ Properties and Fields:
 Today's Plan:
 	Common Interface - left bcz all in list are linked to topics like LINQ and List
 		IDisposable Supports manual resource cleanup using Dispose() but now using 'using' kwyword
+	Common Exceptions - refer to photo
+	pointer types -- can not implement bcz of cannot use 'unsafe' block
 
-	pointer types
-	Common Exceptions
-
-
-Array
-List
-Hashtable
-Dictionaries
-Generics in c#
-SOLID Principles
-
-An Overview of Events
-Delegates
-Events Redux
-Extension Methods

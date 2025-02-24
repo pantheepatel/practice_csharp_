@@ -1,0 +1,36 @@
+List
+works: same as arrayList but it is generic collection and bound to have same type of data
+	initialization : 
+			List<T>(): This constructor is used to create an instance of the List<T> class that is empty and has the default initial capacity.
+			List<T>(IEnumerable): This constructor is used to create an instance of the List<T> class that contains elements copied from the specified collection and has sufficient capacity to accommodate the number of elements copied.
+			List<T>(Int32): This constructor is used to create an instance of the List<T> class that is empty and has the specified initial capacity.
+	- ArrayList: non-generic type of collection. represents an ordered collection of an object that can be indexed individually.
+		use: to create a dynamic array means the size of the array increase or decrease automatically
+		inherits Object Class.
+		implements IEnumerable, ICollection, IList, ICloneable interfaces
+		why not: can't have multidimensional array, it's not type safe
+		initialization: ArrayList(),ArrayList(Int32),ArrayList(ICollection)
+		Extra: You can also create the object of ArrayList class using the IEnumerable, ICollection, and IList interfaces but some methods of ArrayList class will not be applicable on them as they are not the members of these interfaces.
+		Default methods: ArrayList(), ArrayList(ICollection), ArrayList(Int32), Capacity, Count, IsFixedSize, IsReadOnly, IsSynchronized, Item[Int32], SyncRoot, Adapter(IList), Add(Object), AddRange(ICollection), BinarySearch(Int32, Int32, Object, IComparer), BinarySearch(Object), BinarySearch(Object, IComparer), Clear(), Clone(), Contains(Object), CopyTo(Array), CopyTo(Array, Int32), CopyTo(Int32, Array, Int32, Int32), Equals(Object), FixedSize(ArrayList), FixedSize(IList), GetEnumerator(), GetEnumerator(Int32, Int32), GetHashCode(), GetRange(Int32, Int32), GetType(), IndexOf(Object), IndexOf(Object, Int32), IndexOf(Object, Int32, Int32), Insert(Int32, Object), InsertRange(Int32, ICollection), LastIndexOf(Object), LastIndexOf(Object, Int32), LastIndexOf(Object, Int32, Int32), MemberwiseClone(), ReadOnly(ArrayList), ReadOnly(IList), Remove(Object), RemoveAt(Int32), RemoveRange(Int32, Int32), Repeat(Object, Int32), Reverse(), Reverse(Int32, Int32), SetRange(Int32, ICollection), Sort(), Sort(IComparer), Sort(Int32, Int32, IComparer), Synchronized(ArrayList), Synchronized(IList), ToArray(), ToArray(Type), ToString(), TrimToSize()
+
+Hashtable : collection that stores key-value pairs, it is non-generic
+It uses a hash code to organize the keys for efficient data retrieval. The key can be any object, and each key is associated with a corresponding value. 
+	in hashtable:
+	 - the key cannot be null, but the value can be null.
+	 - key objects must be immutable as long as they are used as keys in the Hashtable.
+	 - can store elements of different types.
+	 - key must be unique.
+	 - The elements of Hashtable that are key-value pair is stored as DictionaryEntry objects.
+
+
+
+
+
+
+
+
+
+Questions
+how the capacity of arraylist is calculated
+difference between contains and containskey in hashtable
+hashset

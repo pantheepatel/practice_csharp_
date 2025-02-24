@@ -51,6 +51,13 @@ namespace moderateCSharp
             //}  // fs.Dispose() is called automatically here
             //Console.WriteLine("File closed.");
 
+            // pointer type
+            unsafe
+            {
+                int num = 10;
+                int* ptr = &num;  // Pointer to num
+                Console.WriteLine((int)ptr);  // Prints memory address
+            }
 
             //// extras
             //// 1. parallel
@@ -58,6 +65,8 @@ namespace moderateCSharp
             //{
             //    Console.WriteLine($"Task {i} running on thread {Task.CurrentId}");
             //});
+
+
 
         }
     }
