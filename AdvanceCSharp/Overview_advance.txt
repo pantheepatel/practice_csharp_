@@ -25,6 +25,32 @@ IMPORTANT: don't use HashTable(non-generic) class now, instead use Dictionary(ge
 
 Dictionary: collection that stores key-value pairs, it is generic
 
+Generics: it is a class which allows the user to define classes and methods with the placeholder
+	features:
+		It helps you in code reuse, performance and type safety.
+		create your own generic classes, methods, interfaces and delegates.
+		create generic collection classes. The .NET framework class library contains many new generic collection classes in System.Collections.Generic namespace.
+		get information on the types used in generic data type at run-time.
+	advantages:
+		You can use a single generic type definition for multiple purposes in the same code without any alterations.
+		provide better type safety, especially in the case of collections. 
+		perform better than normal system types because they reduce the need for boxing, unboxing, and type casting the variables or objects. 
+	built-in generic types, such as List<T>, Dictionary<TKey, TValue>, and Nullable<T>.
+
+
+** pipeline between the Event Raiser and Event Handler and we call that pipeline a Delegate.
+IMPORTANT: signature(Access Modifier, Return Type, Number, Type, Order of Parameters) of the delegate and the method it points should be the same.
+Event raiser --> Pipeline(delegate(with args/no args)) refer to obj that is going to handle event --> Event Handler
+Events: are notifications. signals occurance of action.
+	provides way to trigger noti from end users or object
+	obj which triggers event doen't need to know which obj is going to handle it
+	Event args: arguments that are passed within event
+		used to encapulate event data
+Delegates: is an object which refers to a method or it is a reference type variable that can hold a reference to the methods. It's special type of class.
+	without delegate event would not be useful at all.
+Event handler: who handles triggered event.(receive and process data)
+	that contains 2 args; 1.sender 2.eventArgs
+
 Extension Methods: Allows adding new methods to existing types without modifying their code.
 	Defined in a static class also Method itself must be static
 	First parameter uses this keyword to specify which type it extends

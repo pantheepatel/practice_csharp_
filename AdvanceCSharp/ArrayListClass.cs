@@ -12,14 +12,14 @@ namespace AdvanceCSharp
         public void ArrayListClassMethod()
         {
             Console.WriteLine("* into arraylist method *");
-            ArrayList myList = new ArrayList();
+            ArrayList myList = new ArrayList(3);
 
             // Adding elements in the ArrayList
             myList.Add(12.56);
             myList.Add("Panthee Patel");
             myList.Add(null);
-            myList.Add('P');
-            myList.Add(1234);
+            //myList.Add('P');
+            //myList.Add(1234);
 
             // Accessing the elements 
             foreach (var elements in myList)
