@@ -29,6 +29,10 @@ namespace AdvanceCSharp
             {
                 ht[s] = "s1";
             }
+            // adding new key-value pair
+            ht["four"] = 4;
+            // accessing with key
+            Console.WriteLine(ht["four"]);
             Console.WriteLine(ht.ContainsValue("One"));
             Console.WriteLine(ht.ContainsKey("One"));
             Console.WriteLine(ht.Contains("One"));
@@ -43,6 +47,16 @@ namespace AdvanceCSharp
             //h2.Remove("2");
             //h2.Remove(32);
             //h2.Clear();
+
+            //Creating a clone Hashtable using Clone method
+            Hashtable cloneHashtable = (Hashtable)ht.Clone();
+
+            //Copying the Hashtable to an object array
+            DictionaryEntry[] myArray = new DictionaryEntry[ht.Count];
+            ht.CopyTo(myArray, 0);
+            //ht.Keys.CopyTo(myArray, 0); // to copy only keys of ht into new arr
+
+
         }
     }
 }

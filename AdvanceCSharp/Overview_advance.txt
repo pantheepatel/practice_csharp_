@@ -21,12 +21,28 @@ It uses a hash code to organize the keys for efficient data retrieval. The key c
 	 - can store elements of different types.
 	 - key must be unique.
 	 - The elements of Hashtable that are key-value pair is stored as DictionaryEntry objects.
+IMPORTANT: don't use HashTable(non-generic) class now, instead use Dictionary(generic)
+
+Dictionary: collection that stores key-value pairs, it is generic
+
+Extension Methods: Allows adding new methods to existing types without modifying their code.
+	Defined in a static class also Method itself must be static
+	First parameter uses this keyword to specify which type it extends
+	Called like an instance method of the extended type
+	Doesn't modify the original class(doesn't override base class of String,Int,...)
+	Cann't override default method of base class, only can add new methods
 
 
 
 
 
 
+
+TODO
+generics in c#
+An Overview of Events
+Delegates
+Events Redux
 
 
 
