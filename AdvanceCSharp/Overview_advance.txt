@@ -58,10 +58,25 @@ Extension Methods: Allows adding new methods to existing types without modifying
 	Doesn't modify the original class(doesn't override base class of String,Int,...)
 	Cann't override default method of base class, only can add new methods
 
-
-
-
-
+SOLID Principles:
+1. Single Responsibility Principle (SRP)
+	Meaning:  a class should have only one reason to change, a class should have only one job or responsibility.
+	Benefits of SRP:
+		Improved Maintainability: Changes in tax logic or storage won't affect the Employee class.
+		Better Testability: We can test tax calculation and persistence separately.
+		Loose Coupling: Each class has a single responsibility, making the codebase more modular.
+2. Open/Closed Principle (OCP)
+	Meaning: a class should be open for extension but closed for modification.
+3. Liskov Substitution Principle (LSP)
+	Meaning: A subclass should be able to replace its base class without affecting the correctness of the program.
+4. Interface Segregation Principle (ISP)
+	Meaning: A class should not be forced to implement interfaces it does not use.
+5. Dependency Inversion Principle (DIP)
+	meaning: High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces or abstract classes).
+	Benefits of DIP:
+		It reduces tight coupling between classes.
+		It makes code more maintainable and testable.
+		It allows easy swapping of implementations (e.g., switching from MySQL to SQL Server).
 
 
 TODO

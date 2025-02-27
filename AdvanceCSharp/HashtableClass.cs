@@ -17,6 +17,7 @@ namespace AdvanceCSharp
             ht.Add("One", 1);
             ht.Add("Two", 2);
             ht.Add("Three", 3);
+            //ht.Add("Three", 5);
 
             Console.WriteLine("Hashtable elements:");
             foreach (DictionaryEntry e in ht)
