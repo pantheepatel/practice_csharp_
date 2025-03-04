@@ -42,6 +42,7 @@ namespace AdvanceCSharp
             //var1.Display("str1", 23);
             //var1.Display<string>("str2", "str msg");
 
+            //// TODO: different ways to use delegate
             //// events and delegates
             //// Creating an object of the class will trigger the constructor
             //DelegatesClass obj = new DelegatesClass();
