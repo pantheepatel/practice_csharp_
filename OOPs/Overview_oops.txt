@@ -1,4 +1,4 @@
-public private protected internal static abstract virtual override sealed; protected internal, protected private
+﻿public private protected internal static abstract virtual override sealed; protected internal, protected private
 non static member of class can not be accessed via static block of class
 'virtual' or 'absract' members can not be 'private'
 can not create instance of 'abstract class' or 'interface'
@@ -74,7 +74,8 @@ Q. sealed class - no inheritance but can create instance
    static constuctor - Runs only once when the class is first loaded into memory. Does not take parameters.
 
 Q. pillars of oops
-	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
+	1 Abstraction: Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation. 
+		Hiding implementation details and exposing only essential features using abstract classes or interfaces.
 		achieve: using 'abstract' keyword
 	2 Encapsulation: defined as the wrapping up of data under a single unit.
 	the data in a class is hidden from other classes, so it is also known as data-hiding.
@@ -90,6 +91,7 @@ Q. pillars of oops
 			types of inheritance(in C# for interface): 4.multiple 5.hybrid
 		just like super() in java in C# we use base()
 	4 Polymorphism: polymorphism means having many forms.
+		Enables a single method or function to work in multiple ways, either by overriding or overloading methods.
 		achieve: methodOverloading and methodOverriding
 			1. methodOverloading - same class, same method name, compiletime polymorphism
 			2. methodOverriding - parent and child class, same method name, runtime polymorphism
@@ -147,10 +149,11 @@ Q. enum/enumeration: user-defined type
 set of named constant values.
 directl under namespace, class, structure
 
-Q. struct/structures: user-defined type
+Q. struct/structures: user-defined type: value type alternative of class
 used in procedure lan like C, which are replaced by class in OOP lan.
 struct can contain all things that class can contain(IN C# not other lan)
 	(can contain - field, method, constructor, property, indexers, operator method,... )
+Structs are lightweight objects used for small data models and avoid heap allocation
 
 Q. diff between class and struct
 class - ref type, stored in heap, larger volume of data, predefined types(string, object,...), new is mandatory for creating instance, fields can be initialized at time of declaration
@@ -194,6 +197,10 @@ Q. Object cloning: refers to creating an exact copy of an object in memory.
 	2. deep copy - manual cloning, serialization, or ICloneable(interface)
 		Copies the entire object along with referenced objects (creates new instances).
 		
+Q. Event and Delegate: 
+An event is a mechanism for notifying subscribers when something happens. Events use delegates.
+A delegate is a type-safe function pointer.
+
 		
 
 
@@ -202,6 +209,28 @@ Q. Operator method: in C# allow overloading operators to define custom behaviors
 
 Q. Extra:
 	1. Parallel computing allows multiple calculations to run concurrently.
+	2. static member belongs to the class itself rather than an instance.
+	3. Classes can encapsulate computations inside methods or properties
+		example :
+		class Circle {
+			private double radius;
+			public Circle(double r) { radius = r; }
+			public double Area => Math.PI * radius * radius;  // Computed property
+		}
+	4. Types:
+		i. Reference Type: Stored in the heap, it hold a memory address rather than the actual value. When assigned to another variable, both reference the same memory location.
+			example, class, interface, delegate, Array, string(though immutable)
+		ii. Value Type: Stored in the stack, it contain the actual data. When assigned to another variable, a copy is created.
+			example, int, float, double, char, bool, struct, enum, tuple
+	5. Assembly: Assemblies are compiled code libraries (.exe or .dll) that contain metadata and code.
+			Private Assembly → Used within a single application.
+			Shared Assembly → Stored in GAC (Global Assembly Cache) for multiple apps.
+	6.  object input = 5;
+		switch (input) {
+			case int n when n > 0: Console.WriteLine("Positive Number"); break;
+			case string s: Console.WriteLine($"String: {s}"); break;
+			default: Console.WriteLine("Unknown Type"); break;
+		}
 
 
 
