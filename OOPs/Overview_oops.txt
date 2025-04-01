@@ -93,8 +93,8 @@ Q. pillars of oops
 	4 Polymorphism: polymorphism means having many forms.
 		Enables a single method or function to work in multiple ways, either by overriding or overloading methods.
 		achieve: methodOverloading and methodOverriding
-			1. methodOverloading - same class, same method name, compiletime polymorphism
-			2. methodOverriding - parent and child class, same method name, runtime polymorphism
+			1. methodOverloading - same class, same method name, compiletime polymorphism, static, early
+			2. methodOverriding - parent and child class, same method name, runtime polymorphism, dynamic, late
 				use keywords, virtual(parent class method), override(child class method), most important when you make obj of child class and store it in type of parent class, so here if you haven't used these keywords then it will always call parent's method.
 
 	difference between
@@ -130,7 +130,7 @@ Q. static-early-compileTime binding-method overloading
 Q. dynamic-runTime binding-method overriding
 	to make runtime binding we use virtual and override keyword to specify which method is overridden and which to use.
 
-Q. what are interfaces in C#? user defined type which contains only abstract method in body
+Q. what are interfaces in C#? user defined type which contains only abstract method in body, after C# 8 interface can also have method body.
 An interface in C# defines the contract to which a class must adhere. All methods in an interface are public abstract by default (that is, they have no implementation), and any class that implements the interface must supply implementations for all of the interface's methods.
 	It describes methods and attributes but not their implementations.
 	-- the default scope members of an interface is public but for class they are private.
@@ -147,7 +147,7 @@ Q. Method Parameters:
 
 Q. enum/enumeration: user-defined type
 set of named constant values.
-directl under namespace, class, structure
+directly under namespace, class, structure
 
 Q. struct/structures: user-defined type: value type alternative of class
 used in procedure lan like C, which are replaced by class in OOP lan.
@@ -196,6 +196,7 @@ Q. Object cloning: refers to creating an exact copy of an object in memory.
 			changes to ref also reflect to parent
 	2. deep copy - manual cloning, serialization, or ICloneable(interface)
 		Copies the entire object along with referenced objects (creates new instances).
+
 		
 Q. Event and Delegate: 
 An event is a mechanism for notifying subscribers when something happens. Events use delegates.

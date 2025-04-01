@@ -53,6 +53,6 @@ Q. Value type and reference type
 
 Q. compile time and runtime types
 
-Q.
+Q. namespace
 The using keyword can be used so that the complete name isn't required. like using System; so you can write Console.Write(); instead of System.Console.Write()
 	The using directive obviates the requirement to specify the name of the namespace for every class. like namespace.class

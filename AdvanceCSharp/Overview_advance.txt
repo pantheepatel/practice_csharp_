@@ -77,17 +77,3 @@ SOLID Principles:
 		It reduces tight coupling between classes.
 		It makes code more maintainable and testable.
 		It allows easy swapping of implementations (e.g., switching from MySQL to SQL Server).
-
-
-TODO
-generics in c#
-An Overview of Events
-Delegates
-Events Redux
-
-
-
-Questions
-how the capacity of arraylist is calculated
-difference between contains and containskey in hashtable
-hashset
